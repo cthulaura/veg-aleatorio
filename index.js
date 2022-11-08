@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 
 const cities = require('all-the-cities');
 const fetch = require('node-fetch');
@@ -9,15 +9,15 @@ const geolib = require('geolib');
 const { placeDetails } = require('@googlemaps/google-maps-services-js/dist/places/details');
 
 const twitter = new Twitter({
-	consumer_key: process.env.TWITTER_API_KEY,
-	consumer_secret: process.env.TWITTER_SECRET_KEY,
+	consumer_key: process.env.TWITTER_CONSUMER_KEY,
+	consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
 	access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
 	access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
 
 const T = new Twit({
-	consumer_key: process.env.TWITTER_API_KEY,
-	consumer_secret: process.env.TWITTER_SECRET_KEY,
+	consumer_key: process.env.TWITTER_CONSUMER_KEY,
+	consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
 	access_token: process.env.TWITTER_ACCESS_TOKEN_KEY,
 	access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
@@ -40,7 +40,7 @@ function getPlace() {
 
 async function searchNearby(placeCoordinates) {
 	const nearPlaces = await fetch(
-		`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${placeCoordinates[1]},${placeCoordinates[0]}&radius=5000&type=restaurant&key=${apiKey}`
+		`https://maps.googleapis.com/maps/api/place/textsearch/json?query=Restaurante+Vegetariano&sensor=true&location=${placeCoordinates[1]},${placeCoordinates[0]}&radius=5000&type=restaurant&key=${apiKey}`
 	);
 
 	const nearArr = await nearPlaces.json();

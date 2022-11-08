@@ -1,7 +1,7 @@
 {
   "name": "veg-aleatorio",
   "version": "1.0.0",
-  "description": "Bot do Twitter pra se divertir",
+  "description": "Twitter bot for fun and learning",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,11 +19,12 @@
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.16",
     "all-the-cities": "^3.1.0",
+    "axios": "^1.1.2",
     "dotenv": "^16.0.3",
     "geolib": "^3.3.3",
     "node-fetch": "^2.6.7",
     "twit": "^2.2.11",
     "twitter": "^1.7.1",
-    "twitter-api-v2": "^1.12.8"
+    "twitter-api-v2": "^1.12.9"
   }
 }

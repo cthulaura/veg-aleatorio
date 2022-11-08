@@ -1,2 +1,2 @@
 # veg-aleatorio
-Bot do Twitter para publicar restaurantes veganos.
+Twitter bot that posts vegetarian restaurants (or restaurants with a vegetarian menu) randomly selected from Google Places API.
